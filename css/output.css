@@ -991,8 +991,14 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .right-3 {
+    right: calc(var(--spacing) * 3);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-3 {
+    bottom: calc(var(--spacing) * 3);
   }
   .bottom-6 {
     bottom: calc(var(--spacing) * 6);
@@ -1051,11 +1057,17 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-\[60px\] {
+    margin-top: 60px;
   }
   .apexcharts-canvas {
     & .apexcharts-tooltip {
@@ -1512,8 +1524,14 @@
   .h-\[213px\] {
     height: 213px;
   }
+  .h-\[230px\] {
+    height: 230px;
+  }
   .h-\[288px\] {
     height: 288px;
+  }
+  .h-\[327px\] {
+    height: 327px;
   }
   .h-\[400px\] {
     height: 400px;
@@ -1523,6 +1541,9 @@
   }
   .h-\[600px\] {
     height: 600px;
+  }
+  .h-\[714px\] {
+    height: 714px;
   }
   .h-\[calc\(100\%-1rem\)\] {
     height: calc(100% - 1rem);
@@ -1663,6 +1684,12 @@
   }
   .w-\[200px\] {
     width: 200px;
+  }
+  .w-\[254px\] {
+    width: 254px;
+  }
+  .w-\[264px\] {
+    width: 264px;
   }
   .w-\[423px\] {
     width: 423px;
@@ -1820,6 +1847,9 @@
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
   .grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -1864,6 +1894,9 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-\[50px\] {
     gap: 50px;
@@ -1948,8 +1981,14 @@
   .rounded-\[53px\] {
     border-radius: 53px;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
@@ -2178,6 +2217,9 @@
   }
   .bg-\[\#333333\] {
     background-color: #333333;
+  }
+  .bg-\[\#F2F2F2\] {
+    background-color: #F2F2F2;
   }
   .bg-\[\#FF8A00\] {
     background-color: #FF8A00;
@@ -2491,8 +2533,17 @@
       color: var(--color-gray-400);
     }
   }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
   .text-\[18px\] {
     font-size: 18px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
   }
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
@@ -2706,6 +2757,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .hover\:bg-green-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-500);
+      }
+    }
+  }
+  .hover\:bg-green-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-600);
       }
     }
   }
