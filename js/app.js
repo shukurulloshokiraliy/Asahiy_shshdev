@@ -1,3 +1,24 @@
+// DROPDOWN
+const dropdowns = [
+    { button: "dropdownHomeLink", icon: "iconHome" },
+    { button: "dropdownShopLink", icon: "iconShop" },
+    { button: "dropdownPagesLink", icon: "iconPages" },
+    { button: "dropdownBlogLink", icon: "iconBlog" }
+  ];
+  
+  dropdowns.forEach(d => {
+    const btn = document.getElementById(d.button);
+    const icon = document.getElementById(d.icon);
+  
+    if (btn && icon) {
+      btn.addEventListener("click", () => {
+        icon.classList.toggle("rotate-180");
+      });
+    }
+  });
+
+
+
 // 1-topshiriq
 // class Shape {
 //     area() {
@@ -71,4 +92,3 @@
 //   console.log(student1.name);
 //   console.log(student1.grades);
 //   console.log(student1.getAverage().toFixed(2));
-  
