@@ -1,3 +1,23 @@
+// Barcha love buttonlar
+const loveBtns = document.querySelectorAll(".loveBtn");
+// Barcha eye buttonlar
+const eyeBtns = document.querySelectorAll(".eyeBtn");
+
+// Love button toggle
+loveBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("bg-red-500"); 
+    btn.classList.toggle("text-white"); 
+  });
+});
+
+// Eye button action
+eyeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    alert("Men seni ko'ryapman Olma 👀");
+  });
+});
+
 // DROPDOWN
 const dropdowns = [
     { button: "dropdownHomeLink", icon: "iconHome" },
@@ -16,6 +36,48 @@ const dropdowns = [
       });
     }
   });
+
+  // Countdown 
+const countdownDate = new Date().getTime() + (2 * 60 * 60 + 18 * 60 + 46) * 1000;
+
+// Timer element
+const daysEl = document.querySelector("#days");
+const hoursEl = document.querySelector("#hours");
+const minsEl = document.querySelector("#mins");
+const secsEl = document.querySelector("#secs");
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+
+  if (distance < 0) {
+    // timer died
+    daysEl.innerText = "00";
+    hoursEl.innerText = "00";
+    minsEl.innerText = "00";
+    secsEl.innerText = "00";
+    clearInterval(timerInterval);
+    return;
+  }
+
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+  daysEl.innerText = String(days).padStart(2, "0");
+  hoursEl.innerText = String(hours).padStart(2, "0");
+  minsEl.innerText = String(minutes).padStart(2, "0");
+  secsEl.innerText = String(seconds).padStart(2, "0");
+}
+
+
+const timerInterval = setInterval(updateCountdown, 1000);
+updateCountdown();
 
 
 
