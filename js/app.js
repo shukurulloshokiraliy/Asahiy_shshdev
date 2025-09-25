@@ -1,3 +1,68 @@
+// DOM elementlarni chaqirib olamiz
+const elHome_page = document.getElementById("Home_page");
+const elShop_page = document.getElementById("shop_page");
+const elShop_button = document.getElementById("shop_button");
+
+// Bosilganda ishlaydigan mantiq
+elShop_button.addEventListener("click", () => {
+  if (elHome_page.classList.contains("hidden")) {
+    // Agar home yashirilgan bo‘lsa → qaytish
+    elHome_page.classList.remove("hidden");
+    elShop_page.classList.add("hidden");
+    elShop_button.textContent = "My Shop_page";
+  } else {
+    // Agar home ko‘rinib turgan bo‘lsa → shop ochiladi
+    elHome_page.classList.add("hidden");
+    elShop_page.classList.remove("hidden");
+    elShop_button.textContent = "Back Home";
+  }
+});
+
+
+// +- card
+document.querySelectorAll("tr").forEach((row) => {
+  const decrementBtn = row.querySelector(".decrement");
+  const incrementBtn = row.querySelector(".increment");
+  const quantityEl = row.querySelector(".quantity");
+  const subtotalEl = row.querySelector(".subtotal");
+  const priceText = row.querySelector("td:nth-child(2)");
+
+  if (decrementBtn && incrementBtn && quantityEl && subtotalEl && priceText) {
+    const price = parseFloat(priceText.textContent.replace("$", ""));
+    let quantity = parseInt(quantityEl.textContent);
+
+    const updateSubtotal = () => {
+      subtotalEl.textContent = `$${(price * quantity).toFixed(2)}`;
+      updateCartTotal();
+    };
+
+    decrementBtn.addEventListener("click", () => {
+      if (quantity > 1) {
+        quantity--;
+        quantityEl.textContent = quantity;
+        updateSubtotal();
+      }
+    });
+
+    incrementBtn.addEventListener("click", () => {
+      quantity++;
+      quantityEl.textContent = quantity;
+      updateSubtotal();
+    });
+
+    updateSubtotal();
+  }
+});
+
+function updateCartTotal() {
+  let total = 0;
+  document.querySelectorAll(".subtotal").forEach((el) => {
+    total += parseFloat(el.textContent.replace("$", ""));
+  });
+  document.getElementById("cart-subtotal").textContent = `$${total.toFixed(2)}`;
+  document.getElementById("cart-total").textContent = `$${total.toFixed(2)}`;
+}
+
 // Barcha love buttonlar
 const loveBtns = document.querySelectorAll(".loveBtn");
 // Barcha eye buttonlar
@@ -79,78 +144,3 @@ function updateCountdown() {
 const timerInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
-
-
-// 1-topshiriq
-// class Shape {
-//     area() {
-//       return 0;
-//     }
-//   }
-  
-//   class Circle extends Shape {
-//     constructor(radius) {
-//       super();
-//       this.radius = radius;
-//     }
-//     area() {
-//       return Math.PI * this.radius ** 2;
-//     }
-//   }
-  
-//   class Square extends Shape {
-//     constructor(side) {
-//       super();
-//       this.side = side;
-//     }
-//     area() {
-//       return this.side ** 2;
-//     }
-//   }
-  
-//   class Rectangle extends Shape {
-//     constructor(width, height) {
-//       super();
-//       this.width = width;
-//       this.height = height;
-//     }
-//     area() {
-//       return this.width * this.height;
-//     }
-//   }
-  
-//   const circle = new Circle(5);
-//   const square = new Square(4);
-//   const rectangle = new Rectangle(3, 6);
-  
-//   console.log(circle.area().toFixed(2));
-//   console.log(square.area());
-//   console.log(rectangle.area());
-  
-// 2-topshiriq
-// class Student {
-//     constructor(id, name) {
-//       this.id = id;
-//       this.name = name;
-//       this.grades = [];
-//     }
-  
-//     addGrade(grade) {
-//       this.grades.push(grade);
-//     }
-  
-//     getAverage() {
-//       if (this.grades.length === 0) return 0;
-//       let sum = this.grades.reduce((a, b) => a + b, 0);
-//       return sum / this.grades.length;
-//     }
-//   }
-  
-//   const student1 = new Student(1, "Ali");
-//   student1.addGrade(5);
-//   student1.addGrade(4);
-//   student1.addGrade(3);
-  
-//   console.log(student1.name);
-//   console.log(student1.grades);
-//   console.log(student1.getAverage().toFixed(2));
