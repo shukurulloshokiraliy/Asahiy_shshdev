@@ -1,2095 +1,1088 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asahiy_shshdev</title>
-    <link rel="stylesheet" href="css/output.css" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Revalia&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-      </style>
-      
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <!-- NAVBAR -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asahiy_shshdev</title>
+  <link rel="stylesheet" href="css/output.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Revalia&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+</head>
+<body>
 
-      <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex items-center mx-auto p-4">
-          <!-- Logo -->
-          <a
-            href="#"
-            class="flex items-center space-x-3 rtl:space-x-reverse w-[200px] h-[40px]"
-          >
-            <img src="./images/logo_icon.svg" class="h-10" alt="Logo" />
-            <span
-              class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white"
-              >Ecobazar</span
-            >
-          </a>
+  <!-- HEADER -->
+  <header>
+    <!-- NAVBAR -->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./images/logo_icon.svg" class="h-10" alt="Logo" />
+          <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Ecobazar</span>
+        </a>
 
-          <!-- Search -->
-          <form class="flex items-center h-[45px] w-[500px] ml-[230px] p-4">
-            <label for="search" class="sr-only">Search</label>
-            <div class="relative w-full">
-              <div
-                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-              >
-                <svg
-                  class="w-4 h-4 text-gray-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-              </div>
-              <input
-                type="text"
-                id="search"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-                placeholder="Search"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              class="px-5 py-2.5 text-sm font-medium text-white bg-[#00B207] border border-[#00B207] rounded-r-lg hover:bg-[#009a05] focus:ring-4 focus:outline-none focus:ring-green-300"
-            >
-              Search
-            </button>
-          </form>
-
-          <!-- Wishlist + Cart -->
-          <div class="flex items-center space-x-6 ml-6">
-            <!-- Wishlist -->
-            <button class="text-gray-700 hover:text-red-500">
-              <svg
-                class="w-6 h-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 21c-.6 0-1.2-.2-1.7-.6C6.1 17.5 2 13.9 2 9.3 2 6.5 4.2 4.3 7 4.3c1.7 0 3.4.9 4.3 2.4.9-1.5 2.6-2.4 4.3-2.4 2.8 0 5 2.2 5 5 0 4.6-4.1 8.2-8.3 11.1-.5.4-1.1.6-1.7.6z"
-                />
+        <!-- Search -->
+        <form class="hidden md:flex items-center h-[45px] w-full md:w-[500px] md:ml-[230px] mt-4 md:mt-0">
+          <label for="search" class="sr-only">Search</label>
+          <div class="relative w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
               </svg>
-            </button>
-
-            <!-- Cart -->
-            <div class="flex items-center space-x-2">
-              <div class="relative flex flex-wrap">
-                <!-- Badge -->
-                <img src="./images/korzinka.svg" alt="" />
-              </div>
-              <span class="text-sm text-gray-600">Shopping cart:</span>
-              <span class="text-lg font-semibold text-gray-900">$57.00</span>
             </div>
+            <input type="text" id="search"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+              placeholder="Search" required />
+          </div>
+          <button type="submit"
+            class="px-5 py-2.5 text-sm font-medium text-white bg-[#00B207] border border-[#00B207] rounded-r-lg hover:bg-[#009a05] focus:ring-4 focus:outline-none focus:ring-green-300">
+            Search
+          </button>
+        </form>
+
+        <!-- Wishlist + Cart + Burger -->
+        <div class="flex items-center space-x-6 mt-4 md:mt-0">
+          <!-- Wishlist -->
+          <button class="text-gray-700 hover:text-red-500">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 21c-.6 0-1.2-.2-1.7-.6C6.1 17.5 2 13.9 2 9.3 2 6.5 4.2 4.3 7 4.3c1.7 0 3.4.9 4.3 2.4.9-1.5 2.6-2.4 4.3-2.4 2.8 0 5 2.2 5 5 0 4.6-4.1 8.2-8.3 11.1-.5.4-1.1.6-1.7.6z" />
+            </svg>
+          </button>
+
+          <!-- Cart -->
+          <div class="flex items-center space-x-2">
+            <div class="relative">
+              <button id="btn-modal">
+                <img src="./images/korzinka.svg" alt="" />
+              </button>
+            </div>
+            <span class="hidden sm:inline text-sm text-gray-600">Shopping cart:</span>
+            <span class="hidden sm:inline text-lg font-semibold text-gray-900">$57.00</span>
+          </div>
+
+          <!-- Burger -->
+          <div class="burger_menu hidden lg:block">
+            <button id="btn-drawer">
+              <img class="h-6 w-6" src="./images/menu.png" alt="menu" />
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <!-- NAVBAR 2  -->
-      <nav class="bg-[#333333] border-gray-200">
-        <div
-          class="max-w-screen-xl flex flex-wrap items-center gap-[50px] mx-auto p-4"
-        >
-          <!-- HOME DROPDOWN -->
+    <!-- NAVBAR 2 -->
+    <nav class="bg-[#333333] border-gray-200">
+      <div
+        class="max-w-screen-xl w-full flex flex-col items-center md:flex-row md:items-center justify-between gap-6 mx-auto p-4">
+
+        <!-- Dropdownlar -->
+        <div class="flex flex-col items-center md:flex-row md:gap-[50px] gap-4">
+
+          <!-- HOME -->
           <div>
-            <button
-              id="dropdownHomeLink"
-              data-dropdown-toggle="dropdownHome"
-              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500"
-            >
+            <button id="dropdownHomeLink" data-dropdown-toggle="dropdownHome"
+              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500">
               Home
-              <svg
-                class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200"
-                id="iconHome"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" id="iconHome"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
               </svg>
             </button>
-            <div
-              id="dropdownHome"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44"
-            >
+            <div id="dropdownHome"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
               <ul class="py-2 text-sm text-gray-700">
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Vegetables</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Settings</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Earnings</a
-                  >
-                </li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Vegetables</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- SHOP DROPDOWN -->
+          <!-- SHOP -->
           <div>
-            <button
-              id="dropdownShopLink"
-              data-dropdown-toggle="dropdownShop"
-              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500"
-            >
+            <button id="dropdownShopLink" data-dropdown-toggle="dropdownShop"
+              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500">
               Shop
-              <svg
-                class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200"
-                id="iconShop"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" id="iconShop"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
               </svg>
             </button>
-            <div
-              id="dropdownShop"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44"
-            >
+            <div id="dropdownShop"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
               <ul class="py-2 text-sm text-gray-700">
-                <li>
-                 <button id="shop_button" class="block px-4 py-2 hover:bg-gray-100">
-
-                  My Shop_page
-                </button>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Drinks</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Snacks</a
-                  >
-                </li>
+                <li><button id="shop_button" class="block px-4 py-2 hover:bg-gray-100">My Shop_page</button></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Drinks</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Snacks</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- PAGES DROPDOWN -->
-          <div>
-            <button
-              id="dropdownPagesLink"
-              data-dropdown-toggle="dropdownPages"
-              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500"
-            >
+          <!-- PAGES (faqat desktopda ko'rinadi) -->
+          <div class="hidden md:block">
+            <button id="dropdownPagesLink" data-dropdown-toggle="dropdownPages"
+              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500">
               Pages
-              <svg
-                class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200"
-                id="iconPages"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" id="iconPages"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
               </svg>
             </button>
-            <div
-              id="dropdownPages"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44"
-            >
+            <div id="dropdownPages"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
               <ul class="py-2 text-sm text-gray-700">
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >About Us</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a>
-                </li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- BLOG DROPDOWN -->
-          <div>
-            <button
-              id="dropdownBlogLink"
-              data-dropdown-toggle="dropdownBlog"
-              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500"
-            >
+          <!-- BLOG -->
+          <div class="hidden md:block">
+            <button id="dropdownBlogLink" data-dropdown-toggle="dropdownBlog"
+              class="flex items-center justify-between py-2 px-3 text-white hover:text-green-500">
               Blog
-              <svg
-                class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200"
-                id="iconBlog"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" id="iconBlog"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
               </svg>
             </button>
-            <div
-              id="dropdownBlog"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44"
-            >
+            <div id="dropdownBlog"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
               <ul class="py-2 text-sm text-gray-700">
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Latest Posts</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Categories</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                    >Archives</a
-                  >
-                </li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Latest Posts</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Categories</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Archives</a></li>
               </ul>
             </div>
           </div>
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 list-none"
-          >
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-white rounded-sm hover:text-green-500 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500"
-              >
-                About Us
-              </a>
-            </li>
 
+          <!-- Static Links -->
+          <ul class="hidden md:flex font-medium flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 list-none">
             <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-white rounded-sm hover:text-green-500 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500"
-              >
-                Contact Us
-              </a>
+              <a href="#" class="block py-2 px-3 text-white hover:text-green-500">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-white hover:text-green-500">Contact Us</a>
             </li>
           </ul>
-          <div class="flex items-center text-white gap-2 ml-auto">
+
+
+          <!-- Phone -->
+          <div class="flex items-center text-white gap-2 mt-4 md:mt-0 md:ml-auto">
             <img src="./images/PhoneCall 1.svg" alt="Phone" class="w-5 h-5" />
             <span>(210) 860-0114</span>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- SHOP_PAGE -->
-  <!-- SHOP_PAGE -->
-<div id="shop_page" class="shop_page hidden">
-  <div class="w-full">
-    <img 
-      src="./images/Breadcrumbs.svg" 
-      alt="Breadcrumbs" 
-      class="w-full h-auto object-cover"
-    >
-  </div>
+    </nav>
+  </header>
+  <!-- DOM FUNCTION -->
 
-  <!-- Title -->
-  <h1 class="text-center font-semibold text-[24px] md:text-[32px] font-['Poppins'] mt-4 md:mt-6">
-    My Shopping Cart
-  </h1>
-
-  <div class="container px-4 md:px-0">
-    <div class="flex flex-col lg:flex-row justify-center gap-8 mt-10">
-      
-      <!-- Product Card -->
-      <div class="w-full lg:w-[872px] border border-[#E6E6E6] rounded-md p-4 md:p-6">
-        <!-- Table -->
-        <div class="overflow-x-auto">
-          <table class="w-full text-left min-w-[600px]">
-            <thead>
-              <tr class="border-b border-[#808080]">
-                <th class="pb-3 text-sm md:text-base" style="color: #808080;">PRODUCT</th>
-                <th class="pb-3 text-sm md:text-base" style="color: #808080;">PRICE</th>
-                <th class="pb-3 text-sm md:text-base" style="color: #808080;">QUANTITY</th>
-                <th class="pb-3 text-sm md:text-base" style="color: #808080;">SUBTOTAL</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Green Capsicum -->
-              <tr class="border-b border-[#E6E6E6]">
-                <td class="py-4 flex items-center gap-4">
-                  <img src="./images/green.svg" alt="Green Capsicum" class="w-12 h-12 md:w-16 md:h-16">
-                  Green Capsicum
-                </td>
-                <td class="py-4">$14.00</td>
-                <td class="py-4">
-                  <div class="flex items-center gap-2">
-                    <button class="decrement"><img src="./images/Minus.svg" alt=""></button>
-                    <span class="quantity">5</span>
-                    <button class="increment"><img src="./images/Plus.svg" alt=""></button>
-                  </div>
-                </td>
-                <td class="py-4 subtotal">$70.00</td>
-                <td><button class="text-gray-400">✕</button></td>
-              </tr>
-              <!-- Red Capsicum -->
-              <tr>
-                <td class="py-4 flex items-center gap-4">
-                  <img src="./images/red.svg" alt="Red Capsicum" class="w-12 h-12 md:w-16 md:h-16">
-                  Red Capsicum
-                </td>
-                <td class="py-4">$14.00</td>
-                <td class="py-4">
-                  <div class="flex items-center gap-2">
-                    <button class="decrement w-8 h-8"><img src="./images/Minus.svg" alt=""></button>
-                    <span class="quantity">5</span>
-                    <button class="increment"><img src="./images/Plus.svg" alt=""></button>
-                  </div>
-                </td>
-                <td class="py-4 subtotal">$14.00</td>
-                <td><button class="text-gray-400">✕</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Buttons -->
-        <div class="flex flex-col md:flex-row justify-between mt-6 gap-3">
-          <button class="border border-[#E6E6E6] bg-[#F2F2F2] px-6 md:px-8 py-2 text-gray-700" style="border-radius: 42px;">
-            Return to shop
-          </button>
-          <button class="border border-[#E6E6E6] bg-[#F2F2F2] px-4 md:px-5 py-2 text-gray-700" style="border-radius: 42px;">
-            Update Cart
-          </button>
-        </div>
-      </div>
-
-      <!-- Cart Total -->
-      <div class="w-full lg:w-[424px] h-auto p-6 mt-6 lg:mt-0" style="border: 2px solid #E6E6E6; border-radius: 10px;">
-        <h3 class="text-lg font-semibold mb-4">Cart Total</h3>
-        <div class="flex justify-between mb-2">
-          <span>Subtotal:</span>
-          <span id="cart-subtotal">$28.00</span>
-        </div>
-        <div class="flex justify-between mb-2">
-          <span>Shipping:</span>
-          <span>Free</span>
-        </div>
-        <div class="flex justify-between font-bold text-lg mb-4">
-          <span>Total:</span>
-          <span id="cart-total">$28.00</span>
-        </div>
-        <button class="w-full bg-[#00B207] text-white py-2 rounded-3xl mt-5" style="border: 40px;">
-          Proceed to checkout
-        </button>
-      </div>
-    </div>
+ <!-- Modal Overlay -->
+<div id="overlay-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-[8888]">
+  <div id="modal" class="relative w-[876px] h-[430px] bg-white rounded-lg flex overflow-hidden transform scale-0 transition-transform duration-300">
     
-    <!-- Coupon Card -->
-    <div class="w-full lg:w-[872px] border rounded-lg p-4 mt-6 flex flex-col md:flex-row items-center gap-4 mx-auto">
-      <span class="font-medium">Coupon Code</span>
-      <input type="text" class="flex-1 border p-2 rounded w-full md:w-auto" placeholder="Enter code">
-      <button class="bg-black text-white px-4 py-2 w-full md:w-[150px]" style="border-radius: 43px;">Apply Coupon</button>
+    <!-- Left Image -->
+    <div class="w-1/2 h-full">
+      <img src="./images/modal_img.svg" alt="Newsletter Image" class="w-full h-full object-cover">
     </div>
-  </div>    
 
-  <!-- Newsletter -->
-  <section class="w-full h-auto md:h-[162px] bg-gray-100 flex items-center mt-10">
-    <div class="max-w-[1320px] w-full mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-6 md:gap-0 text-center md:text-left">
-      <!-- Left text -->
-      <div>
-        <h3 class="font-semibold text-[16px]">Subscribe our Newsletter</h3>
-        <p class="text-sm text-gray-500 max-w-[400px]">
-          Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
-          Phasellus imperdiet elit eu magna.
-        </p>
-      </div>
-
-      <!-- Input + button + social -->
-      <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full md:w-auto">
-        <!-- Input + button -->
-        <div class="flex w-full sm:w-auto">
-          <input 
-            type="email" 
-            placeholder="Your email address"
-            class="w-full sm:w-[280px] h-[46px] rounded-l-full border border-gray-300 px-4 text-sm focus:outline-none"
-          />
-          <button 
-            class="h-[46px] px-6 bg-[#00B207] text-white rounded-r-full hover:bg-green-600 text-sm font-medium"
-          >
-            Subscribe
-          </button>
-        </div>
-
-        <!-- Social icons -->
-        <div class="flex items-center space-x-3">
-          <img src="./images/shop_icon1.svg" alt="Facebook" class="w-[40px] h-[40px] cursor-pointer" />
-          <img src="./images/shop_icon2.svg" alt="Twitter" class="w-[40px] h-[40px] cursor-pointer" />
-          <img src="./images/shop_icon3.svg" alt="Pinterest" class="w-[40px] h-[40px] cursor-pointer" />
-          <img src="./images/shop_icon4.svg" alt="Instagram" class="w-[40px] h-[40px] cursor-pointer" />
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-
-
-    <!-- Home_page -->
-    <div id="Home_page" class="Home_page ">
-   <!-- CONTAINER -->
-   <div class="Container">
-    <!-- GRID_CARDS -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-[872px_423px] gap-4 max-w-screen-xl mx-auto p-4"
-    >
-      <div class="relative w-[872px] h-[600px] shadow-lg rounded-[10px]">
-        <img
-          src="./images/grid_image1.jpg"
-          alt="Organic Food"
-          class="w-full h-full object-cover rounded-[10px]"
-        />
-        <div
-          class="absolute inset-0 flex flex-col justify-center px-6 text-white bg-black/30 rounded-[10px]"
-        >
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Fresh & Healthy Organic Food
-          </h2>
-          <p class="mb-2">
-            Sale up to
-            <span class="bg-[#FF8A00] px-2 py-1 rounded">30% OFF</span>
-          </p>
-          <p class="mb-4">Free shipping on all your order.</p>
-          <a
-            href="#"
-            class="inline-flex items-center justify-center gap-2 w-[191px] h-[51px] bg-white text-green-600 font-medium rounded-[53px] shadow hover:bg-gray-100 transition"
-          >
-            Shop now
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-4">
-        <div class="relative w-[423px] h-[288px] shadow-lg rounded-[10px]">
-          <img
-            src="./images/grid_image2.jpg"
-            alt="Summer Sale"
-            class="w-full h-full object-cover rounded-[10px]"
-          />
-          <div
-            class="absolute inset-0 flex flex-col justify-center items-start p-6 text-black bg-white/70 rounded-[10px]"
-          >
-            <p class="text-sm">SUMMER SALE</p>
-            <h3 class="text-2xl font-bold">75% OFF</h3>
-            <p class="mb-4 text-sm">Only Fruit & Vegetables</p>
-            <a href="#" class="text-green-600 font-medium">Shop Now →</a>
-          </div>
-        </div>
-
-        <div class="relative w-[423px] h-[288px] shadow-lg rounded-[10px]">
-          <img
-            src="./images/grid_image3.svg"
-            alt="Best Deal"
-            class="w-full h-full object-cover rounded-[10px]"
-          />
-          <div
-            class="absolute inset-0 bg-black/40 rounded-[10px] text-white flex flex-col items-center justify-center p-6 text-center"
-          >
-            <p class="text-sm mb-2">BEST DEAL</p>
-            <h3 class="text-2xl font-bold mb-4">
-              Special Products Deal of the Month
-            </h3>
-            <a href="#" class="text-green-300 font-medium">Shop Now →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div
-      class="w-[1300px] h-[128px] mx-auto mt-10 rounded-[8px] p-10 flex justify-between items-center shadow bg-white"
-    >
-      <div class="flex items-center gap-3">
-        <img
-          src="./images/delivery-truck 1.svg"
-          alt="Free Shipping"
-          class="w-8 h-8"
-        />
-        <div>
-          <h4 class="font-semibold">Free Shipping</h4>
-          <p class="text-sm text-gray-500">Free shipping on all your order</p>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <img
-          src="./images/headphones 1.svg"
-          alt="Customer Support"
-          class="w-8 h-8"
-        />
-        <div>
-          <h4 class="font-semibold">Customer Support 24/7</h4>
-          <p class="text-sm text-gray-500">Instant access to Support</p>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <img
-          src="./images/shopping-bag.svg"
-          alt="Secure Payment"
-          class="w-8 h-8"
-        />
-        <div>
-          <h4 class="font-semibold">100% Secure Payment</h4>
-          <p class="text-sm text-gray-500">We ensure your money is save</p>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <img
-          src="./images/package.svg"
-          alt="Money-Back Guarantee"
-          class="w-8 h-8"
-        />
-        <div>
-          <h4 class="font-semibold">Money-Back Guarantee</h4>
-          <p class="text-sm text-gray-500">30 Days Money-Back Guarantee</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- CATEGORY_CARUSEL -->
-  <div class="Carusel">
-    <section class="w-[1320px] h-[520px] mx-auto mt-10">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-semibold">Popular Categories</h2>
-        <a
-          href="#"
-          class="text-green-600 font-medium flex items-center gap-1"
-        >
-          View All →
-        </a>
-      </div>
-
-      <div class="grid grid-cols-6 gap-4">
-        <!-- CARD -->
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c1.svg"
-            alt="Fresh Fruit"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Fresh Fruit
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c2.svg"
-            alt="Fresh Vegetables"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center text-green-600"
-          >
-            Fresh Vegetables
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c3.svg"
-            alt="Meat & Fish"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Meat & Fish
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c4.svg"
-            alt="Snacks"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Snacks
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c5.svg"
-            alt="Beverages"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Beverages
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c6.svg"
-            alt="Beauty & Health"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Beauty & Health
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c7.svg"
-            alt="Bread & Bakery"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Bread & Bakery
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c8.svg"
-            alt="Baking Needs"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Baking Needs
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c9.svg"
-            alt="Cooking"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Cooking
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c10.svg"
-            alt="Diabetic Food"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Diabetic Food
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c11.svg"
-            alt="Dish Detergents"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Dish Detergents
-          </p>
-        </div>
-
-        <div
-          class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/c12.svg"
-            alt="Oil"
-            class="w-[190px] h-[130px] object-contain"
-          />
-          <p
-            class="font-[Poppins] font-medium text-[18px] leading-[150%] text-center"
-          >
-            Oil
-          </p>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- POPULAR CARDS -->
-  <div class="popular_cards">
-    <section class="w-[1320px] h-[714px] mx-auto mt-[60px]">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-semibold">Popular Products</h2>
-        <a
-          href="#"
-          class="text-green-600 font-medium flex items-center gap-1"
-        >
-          View All →
-        </a>
-      </div>
-
-      <div class="grid grid-cols-5 gap-5">
-        <!-- Card 1 -->
-        <div
-          class="group w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <!-- Product Image -->
-          <img
-            src="./images/p1.svg"
-            alt="Chinese cabbage"
-            class="w-full h-[200px] object-contain p-4"
-          />
-
-          <!-- Buttons -->
-          <div
-            class="absolute top-3 right-3 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition"
-          >
-            <!-- Love button -->
-            <button
-              class="loveBtn w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 transition"
-            >
-              <img src="./images/love.svg" alt="Love" class="w-4 h-4" />
-            </button>
-
-            <!-- Eye button -->
-            <button
-              class="eyeBtn w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 transition"
-            >
-              <img src="./images/eye.svg" alt="View" class="w-4 h-4" />
-            </button>
-          </div>
-
-          <!-- Product Info -->
-          <div class="px-4">
-            <h3 class="text-green-600 font-medium mt-2">Chinese cabbage</h3>
-            <p class="text-gray-800 font-semibold">$12.00</p>
-            <div class="flex items-center space-x-1 text-orange-500 text-sm">
-              ★★★★☆
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p2.svg"
-            alt="Fresh Indian Malta"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Fresh Indian Malta
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $20.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p3.svg"
-            alt="Chinese Cabbage"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Chinese Cabbage
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $12.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p4.svg"
-            alt="Green Lettuce"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Green Lettuce
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $9.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p5.svg"
-            alt="Eggplant"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Eggplant
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $34.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p6.svg"
-            alt="Big Potatoes"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Big Potatoes
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $20.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p7.svg"
-            alt="Corn"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Corn
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $20.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p8.svg"
-            alt="Fresh Cauliflower"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Fresh Cauliflower
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $12.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 9 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p9.svg"
-            alt="Green Capsicum"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Green Capsicum
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $9.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Card 10 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p10.svg"
-            alt="Green Chili"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Green Chili
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $34.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- SALE_CARDS -->
-   <div class="sale_cards">
-    <section
-class="w-[1320px] h-[536px] mx-auto mt-[60px] grid grid-cols-3 gap-[30px]"
->
-<!-- Card 1 -->
-<div
-  class="w-[424px] h-[536px] rounded-md bg-[url('../images/bgs_1.svg')] bg-cover bg-center text-white flex flex-col justify-center items-center p-6"
->
-  <p class="text-sm font-medium">BEST DEALS</p>
-  <h2 class="text-[28px] font-bold text-center mt-2">Sale of the Month</h2>
-  <!-- Timer -->
-  <div class="flex space-x-6 mt-4 text-center">
-    <div>
-      <p id="days" class="text-2xl font-bold">00</p>
-      <span class="text-xs">DAYS</span>
-    </div>
-    <div>
-      <p id="hours" class="text-2xl font-bold">02</p>
-      <span class="text-xs">HOURS</span>
-    </div>
-    <div>
-      <p id="mins" class="text-2xl font-bold">18</p>
-      <span class="text-xs">MINS</span>
-    </div>
-    <div>
-      <p id="secs" class="text-2xl font-bold">46</p>
-      <span class="text-xs">SECS</span>
-    </div>
-  </div>
-  
-  <!-- Button -->
-  <button
-    class="mt-6 bg-white text-green-600 font-medium px-6 py-2 rounded-full flex items-center gap-2 hover:bg-green-500 hover:text-white transition"
-  >
-    Shop Now →
-  </button>
-</div>
-
-<!-- Card 2 -->
-<div
-  class="w-[424px] h-[536px] rounded-md bg-[url('../images/bgs_2.svg')] bg-cover bg-center text-white flex flex-col justify-center items-center p-6"
->
-  <p class="text-sm font-medium">85% FAT FREE</p>
-  <h2 class="text-[28px] font-bold text-center mt-2">Low-Fat Meat</h2>
-  <p class="mt-4 text-lg">
-    Started at <span class="text-orange-400 font-semibold">$79.99</span>
-  </p>
-  <button
-    class="mt-6 bg-white text-green-600 font-medium px-6 py-2 rounded-full flex items-center gap-2 hover:bg-green-500 hover:text-white transition"
-  >
-    Shop Now →
-  </button>
-</div>
-
-<!-- Card 3 -->
-<div
-  class="w-[424px] h-[536px] rounded-md bg-[url('../images/bgs_3.svg')] bg-cover bg-center text-black flex flex-col justify-center items-center p-6"
->
-  <p class="text-sm font-medium">SUMMER SALE</p>
-  <h2 class="text-[28px] font-bold text-center mt-2">100% Fresh Fruit</h2>
-  <p class="mt-4 text-lg">
-    Up to
-    <span
-      class="bg-[#1A1A1A] px-3 py-1 rounded text-[#FCC900] font-semibold text-sm"
-      >64% OFF</span
-    >
-  </p>
-  <button
-    class="mt-6 bg-white text-green-600 font-medium px-6 py-2 rounded-full flex items-center gap-2 hover:bg-green-500 hover:text-white transition"
-  >
-    Shop Now →
-  </button>
-</div>
-    </section>
-   </div>
-   <!-- 30% SALE CARD -->
-   <div class="bg_30_sale">
-    <section
-    class="w-[1320px] h-[358px] mx-auto mt-[60px] rounded-[10px] bg-[url('../images/30_sale.jpg')] bg-cover bg-center flex justify-end items-center px-10"
-  >
-    <!-- Text content wrapper -->
-    <div class="w-[441px] h-[159px] flex flex-col justify-between text-left text-white">
-      <p class="text-sm uppercase tracking-wide">SUMMER SALE</p>
-      
-      <!-- H2 -->
-      <h2 class="font-poppins font-semibold text-[56px] leading-[120%]">
-        <span class="text-orange-500">37%</span> OFF
-      </h2>
-  
-      <p class="text-base mt-2 leading-relaxed text-gray-200">
-        Free on all your order, Free Shipping and 30 days <br />
-        money-back guarantee
+    <!-- Right Content -->
+    <div class="w-1/2 p-10 flex flex-col justify-center">
+      <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+      <p class="text-gray-600 mb-6 " style="text-align: center;">
+        Subscribe to our newsletter and Save your 
+        <span class="text-orange-500 font-semibold">20% money</span> with discount code today.
       </p>
-  
-      <!-- Button -->
-      <button
-        class="w-[162px] mt-5 bg-green-600 text-center text-white font-medium px-7 py-3 rounded-full flex items-center  hover:bg-green-500 transition"
-      >
-        Shop Now →
+<!-- Input + Button -->
+<div class="flex w-full sm:w-auto">
+  <input style="border-radius: 43px;" type="email" placeholder="Your email address"
+    class="w-full sm:w-[280px] h-[46px]  border border-gray-300 px-4 text-sm focus:outline-none" />
+  <button class="h-[46px] px-6 bg-[#00B207] text-white  hover:bg-green-600 text-sm font-medium"
+    style="border-radius: 43px; margin-left: -34px;">
+    Subscribe
+  </button>
+</div>
+
+<!-- Checkbox -->
+<div class="flex justify-center mt-4">
+  <label class="flex items-center text-sm text-gray-500">
+    <input type="checkbox" class="mr-2">
+    Do not show this window
+  </label>
+</div>
+
+
+
+    <!-- Close Button -->
+    <button id="close" class="absolute top-4 right-4">
+      <img src="./images/dom_x.svg" alt="close" class="w-6 h-6">
+    </button>
+  </div>
+</div>
+
+
+   
+  </div>
+   <!-- Drawer Overlay -->
+<!-- Drawer Overlay -->
+<div id="overlay-drawer" class="fixed inset-0 bg-black/60 hidden" style="z-index: 9999;">
+  <div id="drawer"
+       class="absolute top-0 right-0 w-[455px] max-w-[90%] h-full bg-white transform translate-x-full transition-transform duration-300 flex flex-col">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between p-4 ">
+      <h2 class="text-lg font-semibold">Shopping Cart (2)</h2>
+      <button id="close-drawer">
+        <img src="./images/dom_x.svg" alt="Close" class="w-5 h-5" />
       </button>
     </div>
-  </section>
-   </div>
-    <!-- FEATURE CARUSEL -->
-    <section class="w-[1320px] h-[414px] mx-auto mt-[60px]">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-semibold">Feutured Products</h2>
-        <a
-          href="#"
-          class="text-green-600 font-medium flex items-center gap-1"
-        >
-          View All →
-        </a>
+
+    <!-- Products -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+      
+      <!-- Product 1 -->
+<div class="flex items-center gap-4 pb-4">
+  <img src="./images/drawer_appelsin.svg" alt="Orange" class="w-16 h-16 object-contain" />
+  <div class="flex-1">
+    <h3 class="text-sm font-medium">Fresh Indian Orange</h3>
+    <p class="text-xs text-gray-500">1 kg x <span class="font-semibold">$12.00</span></p>
+  </div>
+  <button class="remove-btn">
+    <img src="./images/product_x.svg" alt="Remove" class="w-4 h-4" />
+  </button>
+</div>
+<div class="w-full h-[1px] bg-[#E5E5E5]"></div>
+
+<!-- Product 2 -->
+<div class="flex items-center gap-4 pb-4">
+  <img src="./images/drawer_apple.svg" alt="Apple" class="w-16 h-16 object-contain" />
+  <div class="flex-1">
+    <h3 class="text-sm font-medium">Green Apple</h3>
+    <p class="text-xs text-gray-500">1 kg x <span class="font-semibold">$14.00</span></p>
+  </div>
+  <button class="remove-btn">
+    <img src="./images/product_x.svg" alt="Remove" class="w-4 h-4" />
+  </button>
+</div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="p-4  space-y-3">
+      <div class="flex items-center justify-between text-sm">
+        <span>2 Product</span>
+        <span class="px-2 py-1font-bold rounded">$26.00</span>
       </div>
 
-      <div class="grid grid-cols-5 gap-5">
-        <!-- Card 1 -->
-        <div
-          class="group w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <!-- Product Image -->
-          <img
-            src="./images/p1.svg"
-            alt="Chinese cabbage"
-            class="w-full h-[200px] object-contain p-4"
-          />
+      <button class="w-full py-3 bg-[#00B207] text-white rounded-full font-medium ">
+        Checkout
+      </button>
+      <button class="w-full py-3 bg-[#56AC591A] text-[#00B207] rounded-full font-medium ">
+        Go To Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+  <!-- SHOP_PAGE -->
+  <div id="shop_page" class="shop_page hidden">
+    <div class="w-full">
+      <img src="./images/Breadcrumbs.svg" alt="Breadcrumbs" class="w-full h-auto object-cover">
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-center font-semibold text-[24px] md:text-[32px] font-['Poppins'] mt-4 md:mt-6">
+      My Shopping Cart
+    </h1>
+
+    <div class="container px-4 md:px-0">
+      <div class="flex flex-col lg:flex-row justify-center gap-8 mt-10">
+
+        <!-- Product Card -->
+        <div class="w-full lg:w-[872px] border border-[#E6E6E6] rounded-md p-4 md:p-6">
+          <!-- Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left min-w-[600px]">
+              <thead>
+                <tr class="border-b border-[#808080]">
+                  <th class="pb-3 text-sm md:text-base" style="color: #808080;">PRODUCT</th>
+                  <th class="pb-3 text-sm md:text-base" style="color: #808080;">PRICE</th>
+                  <th class="pb-3 text-sm md:text-base" style="color: #808080;">QUANTITY</th>
+                  <th class="pb-3 text-sm md:text-base" style="color: #808080;">SUBTOTAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Green Capsicum -->
+                <tr class="border-b border-[#E6E6E6]">
+                  <td class="py-4 flex items-center gap-4">
+                    <img src="./images/green.svg" alt="Green Capsicum" class="w-12 h-12 md:w-16 md:h-16">
+                    Green Capsicum
+                  </td>
+                  <td class="py-4">$14.00</td>
+                  <td class="py-4">
+                    <div class="flex items-center gap-2">
+                      <button class="decrement"><img src="./images/Minus.svg" alt=""></button>
+                      <span class="quantity">5</span>
+                      <button class="increment"><img src="./images/Plus.svg" alt=""></button>
+                    </div>
+                  </td>
+                  <td class="py-4 subtotal">$70.00</td>
+                  <td><button class="text-gray-400">✕</button></td>
+                </tr>
+                <!-- Red Capsicum -->
+                <tr>
+                  <td class="py-4 flex items-center gap-4">
+                    <img src="./images/red.svg" alt="Red Capsicum" class="w-12 h-12 md:w-16 md:h-16">
+                    Red Capsicum
+                  </td>
+                  <td class="py-4">$14.00</td>
+                  <td class="py-4">
+                    <div class="flex items-center gap-2">
+                      <button class="decrement w-8 h-8"><img src="./images/Minus.svg" alt=""></button>
+                      <span class="quantity">5</span>
+                      <button class="increment"><img src="./images/Plus.svg" alt=""></button>
+                    </div>
+                  </td>
+                  <td class="py-4 subtotal">$14.00</td>
+                  <td><button class="text-gray-400">✕</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <!-- Buttons -->
-          <div
-            class="absolute top-3 right-3 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition"
-          >
-            <!-- Love button -->
-            <button
-              class="loveBtn w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 transition"
-            >
-              <img src="./images/love.svg" alt="Love" class="w-4 h-4" />
+          <div class="flex flex-col md:flex-row justify-between mt-6 gap-3">
+            <button class="border border-[#E6E6E6] bg-[#F2F2F2] px-6 md:px-8 py-2 text-gray-700"
+              style="border-radius: 42px;">
+              Return to shop
             </button>
-
-            <!-- Eye button -->
-            <button
-              class="eyeBtn w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 transition"
-            >
-              <img src="./images/eye.svg" alt="View" class="w-4 h-4" />
+            <button class="border border-[#E6E6E6] bg-[#F2F2F2] px-4 md:px-5 py-2 text-gray-700"
+              style="border-radius: 42px;">
+              Update Cart
             </button>
           </div>
-
-          <!-- Product Info -->
-          <div class="px-4">
-            <h3 class="text-green-600 font-medium mt-2">Chinese cabbage</h3>
-            <p class="text-gray-800 font-semibold">$12.00</p>
-            <div class="flex items-center space-x-1 text-orange-500 text-sm">
-              ★★★★☆
-            </div>
-          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p2.svg"
-            alt="Fresh Indian Malta"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Fresh Indian Malta
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $20.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+        <!-- Cart Total -->
+        <div class="w-full lg:w-[424px] h-auto p-6 mt-6 lg:mt-0"
+          style="border: 2px solid #E6E6E6; border-radius: 10px;">
+          <h3 class="text-lg font-semibold mb-4">Cart Total</h3>
+          <div class="flex justify-between mb-2">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$28.00</span>
+          </div>
+          <div class="flex justify-between mb-2">
+            <span>Shipping:</span>
+            <span>Free</span>
+          </div>
+          <div class="flex justify-between font-bold text-lg mb-4">
+            <span>Total:</span>
+            <span id="cart-total">$28.00</span>
+          </div>
+          <button class="w-full bg-[#00B207] text-white py-2 rounded-3xl mt-5" style="border: 40px;">
+            Proceed to checkout
           </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
         </div>
+      </div>
 
-        <!-- Card 3 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p3.svg"
-            alt="Chinese Cabbage"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Chinese Cabbage
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $12.00
+      <!-- Coupon Card -->
+      <div
+        class="w-full lg:w-[872px] border border-[#E5E5E5] rounded-lg p-4 mt-6 flex flex-col md:flex-row items-center gap-4 mx-auto">
+        <span class="font-medium">Coupon Code</span>
+        <input type="text" class="flex-1 border border-[#E5E5E5] p-2 rounded w-full md:w-auto" placeholder="Enter code">
+        <button class="bg-black text-white px-4 py-2 w-full md:w-[150px]" style="border-radius: 43px;">Apply
+          Coupon</button>
+      </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <section class="w-full h-auto md:h-[162px] bg-gray-100 flex items-center mt-10">
+      <div
+        class="max-w-[1320px] w-full mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-6 md:gap-0 text-center md:text-left">
+        <!-- Left text -->
+        <div>
+          <h3 class="font-semibold text-[16px]">Subscribe our Newsletter</h3>
+          <p class="text-sm text-gray-500 max-w-[400px]">
+            Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
+            Phasellus imperdiet elit eu magna.
           </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
         </div>
 
-        <!-- Card 4 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p4.svg"
-            alt="Green Lettuce"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Green Lettuce
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $9.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
+        <!-- Input + button + social -->
+        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full md:w-auto">
+          <!-- Input + button -->
+          <div class="flex w-full sm:w-auto">
+            <input style="border-radius: 43px;" type="email" placeholder="Your email address"
+              class="w-full sm:w-[280px] h-[46px]  border border-gray-300 px-4 text-sm focus:outline-none" />
+            <button class="h-[46px] px-6 bg-[#00B207] text-white  hover:bg-green-600 text-sm font-medium"
+              style="border-radius: 43px; margin-left: -34px;">
+              Subscribe
+            </button>
+          </div>
+
+          <!-- Social icons -->
+          <div class="flex items-center space-x-3">
+            <img src="./images/shop_icon1.svg" alt="Facebook" class="w-[40px] h-[40px] cursor-pointer" />
+            <img src="./images/shop_icon2.svg" alt="Twitter" class="w-[40px] h-[40px] cursor-pointer" />
+            <img src="./images/shop_icon3.svg" alt="Pinterest" class="w-[40px] h-[40px] cursor-pointer" />
+            <img src="./images/shop_icon4.svg" alt="Instagram" class="w-[40px] h-[40px] cursor-pointer" />
           </div>
         </div>
-
-        <!-- Card 5 -->
-        <div
-          class="w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition"
-        >
-          <img
-            src="./images/p5.svg"
-            alt="Eggplant"
-            class="w-[254px] h-[230px] object-contain mx-auto mt-2"
-          />
-          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">
-            Eggplant
-          </h3>
-          <p
-            class="font-poppins font-semibold text-[14px] text-center text-gray-800"
-          >
-            $34.00
-          </p>
-          <button
-            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition"
-          >
-            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
-          </button>
-          <!-- Rating Stars -->
-          <div class="flex justify-center space-x-1 mt-1">
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Full Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-orange-500 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-            <!-- Empty Star -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 text-gray-300 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 .587l3.668 7.568L24 9.75l-6 5.847 1.416 8.268L12 18.902l-7.416 4.963L6 15.597 0 9.75l8.332-1.595z"
-              />
-            </svg>
-          </div>
-        </div>
-
-      
-     
-
-       
       </div>
     </section>
-    <!-- FOOTER CARDS -->
-     <div class="footer_cards">
-      <section class="w-[1320px] h-[564px] mx-auto my-10 text-center">
-        <h2 class="text-2xl font-semibold mb-8">Latest News</h2>
-        
-        <div class="grid grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="w-[424px] h-[494px] bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="relative w-full h-[250px]">
-              <img src="./images/foot_img1.svg" alt="Food Image 1" class="w-[424px] h-[324px]  object-cover">
-             
-            </div>
-            <div class="p-20 text-left">
-              <p class="text-sm text-gray-500 mb-2">🍴 Food | 👤 Admin | 💬 55 Comments</p>
-              <h3 class="text-base font-medium mb-3">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h3>
-              <a href="#" class="text-green-600 font-semibold text-sm">Read More →</a>
+  </div>
+  <!-- Home_page -->
+  <div id="Home_page" class="Home_page ">
+    <!-- CONTAINER -->
+    <div class="Container">
+      <!-- GRID_CARDS -->
+      <section class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4 max-w-screen-xl mx-auto p-4">
+        <!-- Big Card -->
+        <div class="relative w-full h-[400px] md:h-[600px] shadow-lg rounded-[10px]">
+          <img src="./images/grid_image1.jpg" alt="Organic Food" class="w-full h-full object-cover rounded-[10px]" />
+          <div class="absolute inset-0 flex flex-col justify-center px-6 text-white bg-black/30 rounded-[10px]">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4">
+              Fresh & Healthy Organic Food
+            </h2>
+            <p class="mb-2">
+              Sale up to
+              <span class="bg-[#FF8A00] px-2 py-1 rounded">30% OFF</span>
+            </p>
+            <p class="mb-4">Free shipping on all your order.</p>
+            <a href="#"
+              class="inline-flex items-center justify-center gap-2 w-[160px] md:w-[191px] h-[45px] md:h-[51px] bg-white text-green-600 font-medium rounded-[53px] shadow hover:bg-gray-100 transition">
+              Shop now
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Small Cards -->
+        <div class="flex flex-col gap-4">
+          <div class="relative w-full h-[200px] md:h-[288px] shadow-lg rounded-[10px]">
+            <img src="./images/grid_image2.jpg" alt="Summer Sale" class="w-full h-full object-cover rounded-[10px]" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-start p-6 text-black bg-white/70 rounded-[10px]">
+              <p class="text-sm">SUMMER SALE</p>
+              <h3 class="text-xl md:text-2xl font-bold">75% OFF</h3>
+              <p class="mb-4 text-sm">Only Fruit & Vegetables</p>
+              <a href="#" class="text-green-600 font-medium">Shop Now →</a>
             </div>
           </div>
-      
-          <!-- Card 2 -->
-          <div class="w-[424px] h-[494px] bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="relative w-full h-[250px]">
-              <img src="./images/foot_img2.svg" alt="Food Image 2" class="w-[424px] h-[324px] object-cover">
-             
-            </div>
-            <div class="p-22 text-left">
-              <p class="text-sm text-gray-500 mb-2">🍴 Food | 👤 Admin | 💬 55 Comments</p>
-              <h3 class="text-base font-medium mb-3">Eget lobortis lorem lacinia. Vivamus pharetra semper.</h3>
-              <a href="#" class="text-green-600 font-semibold text-sm">Read More →</a>
-            </div>
-          </div>
-      
-          <!-- Card 3 -->
-          <div class="w-[424px] h-[494px] bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="relative w-full h-[250px]">
-              <img src="./images/foot_img3.svg" alt="Food Image 3" class="w-[424px] h-[324px]  object-cover">
-          
-            </div>
-            <div class="p-22 text-left">
-              <p class="text-sm text-gray-500 mb-2">🍴 Food | 👤 Admin | 💬 55 Comments</p>
-              <h3 class="text-base font-medium mb-3">Maecenas blandit risus elementum mauris malesuada.</h3>
-              <a href="#" class="text-green-600 font-semibold text-sm">Read More →</a>
+
+          <div class="relative w-full h-[200px] md:h-[288px] shadow-lg rounded-[10px]">
+            <img src="./images/grid_image3.svg" alt="Best Deal" class="w-full h-full object-cover rounded-[10px]" />
+            <div
+              class="absolute inset-0 bg-black/40 rounded-[10px] text-white flex flex-col items-center justify-center p-6 text-center">
+              <p class="text-sm mb-2">BEST DEAL</p>
+              <h3 class="text-xl md:text-2xl font-bold mb-4">
+                Special Products Deal of the Month
+              </h3>
+              <a href="#" class="text-green-300 font-medium">Shop Now →</a>
             </div>
           </div>
         </div>
       </section>
-      
-     </div>
-     <!-- FOOTER COMMENT -->
-     <section class="w-full bg-gray-100 py-[60px]">
-      <div class="max-w-[1320px] mx-auto">
-        <!-- Title -->
-        <h2 class="text-xl font-semibold mb-8 text-center">Client Testimonials</h2>
-    
-        <!-- Cards wrapper -->
-        <div class="flex justify-center gap-8">
+
+      <!-- Features -->
+      <div
+        class="w-full max-w-screen-xl mx-auto mt-10 rounded-[8px] p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 shadow bg-white">
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <img src="./images/delivery-truck 1.svg" alt="Free Shipping" class="w-8 h-8" />
+          <div>
+            <h4 class="font-semibold">Free Shipping</h4>
+            <p class="text-sm text-gray-500">Free shipping on all your order</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <img src="./images/headphones 1.svg" alt="Customer Support" class="w-8 h-8" />
+          <div>
+            <h4 class="font-semibold">Customer Support 24/7</h4>
+            <p class="text-sm text-gray-500">Instant access to Support</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <img src="./images/shopping-bag.svg" alt="Secure Payment" class="w-8 h-8" />
+          <div>
+            <h4 class="font-semibold">100% Secure Payment</h4>
+            <p class="text-sm text-gray-500">We ensure your money is save</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <img src="./images/package.svg" alt="Money-Back Guarantee" class="w-8 h-8" />
+          <div>
+            <h4 class="font-semibold">Money-Back Guarantee</h4>
+            <p class="text-sm text-gray-500">30 Days Money-Back Guarantee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY_CARUSEL -->
+    <div class="Carusel">
+      <section class="w-full max-w-[1320px] mx-auto mt-10 px-4">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-semibold">Popular Categories</h2>
+          <a href="#" class="text-green-600 font-medium flex items-center gap-1">
+            View All →
+          </a>
+        </div>
+
+        <!-- RESPONSIVE GRID -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <!-- CARD 1 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c1.svg" alt="Fresh Fruit" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Fresh Fruit</p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c2.svg" alt="Fresh Vegetables" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center text-green-600">Fresh Vegetables</p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c3.svg" alt="Meat & Fish" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Meat & Fish</p>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c4.svg" alt="Snacks" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Snacks</p>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c5.svg" alt="Beverages" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Beverages</p>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c6.svg" alt="Beauty & Health" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Beauty & Health</p>
+          </div>
+
+          <!-- CARD 7 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c7.svg" alt="Bread & Bakery" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Bread & Bakery</p>
+          </div>
+
+          <!-- CARD 8 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c8.svg" alt="Baking Needs" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Baking Needs</p>
+          </div>
+
+          <!-- CARD 9 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c9.svg" alt="Cooking" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Cooking</p>
+          </div>
+
+          <!-- CARD 10 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c10.svg" alt="Diabetic Food" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Diabetic Food</p>
+          </div>
+
+          <!-- CARD 11 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c11.svg" alt="Dish Detergents" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Dish Detergents</p>
+          </div>
+
+          <!-- CARD 12 -->
+          <div class="w-[200px] h-[213px] border border-[#E5E5E5] rounded-[5px] flex flex-col 
+                  items-center pt-4 pb-6 gap-4 shadow-sm hover:shadow-lg hover:border-green-500 
+                  transition mx-auto">
+            <img src="./images/c12.svg" alt="Oil" class="w-[190px] h-[130px] object-contain" />
+            <p class="font-[Poppins] font-medium text-[18px] text-center">Oil</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- POPULAR CARDS -->
+    <div class="popular_cards">
+      <section class="w-full max-w-[1320px] mx-auto mt-[60px] px-4">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-semibold">Popular Products</h2>
+          <a href="#" class="text-green-600 font-medium flex items-center gap-1">
+            View All →
+          </a>
+        </div>
+
+        <!-- RESPONSIVE GRID -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+
+          <!-- CARD TEMPLATE -->
           <!-- Card 1 -->
-          <div class="bg-white rounded-lg shadow p-6 w-[424px]">
+          <div class="group w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative 
+                  hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p1.svg" alt="American Apple" class="w-[250px] h-[230px] object-contain p-4 mx-auto" />
+            <div class="absolute top-3 right-3 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition">
+              <button class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100">
+                <img src="./images/love.svg" alt="Love" class="w-4 h-4" />
+              </button>
+              <button class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100">
+                <img src="./images/eye.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+            <div class="px-4">
+              <h3 class="font-poppins font-medium text-[16px] text-center mt-3">American Apple</h3>
+              <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$20.00</p>
+              <button
+                class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+                <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+              </button>
+              <div class="flex justify-center space-x-1 mt-1">
+                <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative 
+                  hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p2.svg" alt="Fresh Indian Malta"
+              class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Fresh Indian Malta</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$20.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p3.svg" alt="Chinese Cabbage" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Chinese Cabbage</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$12.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p4.svg" alt="Green Lettuce" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Green Lettuce</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$9.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p5.svg" alt="Eggplant" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Eggplant</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$34.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p6.svg" alt="Big Potatoes" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Big Potatoes</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$20.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p7.svg" alt="Corn" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Corn</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$20.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p8.svg" alt="Fresh Cauliflower"
+              class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Fresh Cauliflower</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$12.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p9.svg" alt="Green Capsicum" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Green Capsicum</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$9.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div
+            class="w-full max-w-[264px] h-[327px] border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition mx-auto">
+            <img src="./images/p10.svg" alt="Green Chili" class="w-[254px] h-[230px] object-contain mx-auto mt-2" />
+            <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Green Chili</h3>
+            <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$34.00</p>
+            <button
+              class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500">
+              <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+            </button>
+            <div class="flex justify-center space-x-1 mt-1">
+              <span class="text-orange-500">⭐⭐⭐⭐</span><span class="text-gray-300">⭐</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- SALE_CARDS -->
+    <div class="sale_cards">
+      <section
+        class="w-full max-w-[1320px] mx-auto mt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+        <!-- Card 1 -->
+        <div
+          class="w-full h-[536px] rounded-md bg-[url('../images/bgs_1.svg')] bg-cover bg-center text-white flex flex-col justify-center items-center p-6">
+          <p class="text-sm font-medium">BEST DEALS</p>
+          <h2 class="text-[28px] font-bold text-center mt-2">Sale of the Month</h2>
+          <!-- Timer -->
+          <div class="flex space-x-6 mt-4 text-center">
+            <div>
+              <p id="days" class="text-2xl font-bold">00</p>
+              <span class="text-xs">DAYS</span>
+            </div>
+            <div>
+              <p id="hours" class="text-2xl font-bold">02</p>
+              <span class="text-xs">HOURS</span>
+            </div>
+            <div>
+              <p id="mins" class="text-2xl font-bold">18</p>
+              <span class="text-xs">MINS</span>
+            </div>
+            <div>
+              <p id="secs" class="text-2xl font-bold">46</p>
+              <span class="text-xs">SECS</span>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button
+            class="mt-6 bg-white text-green-600 font-medium px-6 py-2 rounded-full flex items-center gap-2 hover:bg-green-500 hover:text-white transition">
+            Shop Now →
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="w-full h-[536px] rounded-md bg-[url('../images/bgs_2.svg')] bg-cover bg-center text-white flex flex-col justify-center items-center p-6">
+          <p class="text-sm font-medium">85% FAT FREE</p>
+          <h2 class="text-[28px] font-bold text-center mt-2">Low-Fat Meat</h2>
+          <p class="mt-4 text-lg">
+            Started at <span class="text-orange-400 font-semibold">$79.99</span>
+          </p>
+          <button
+            class="mt-6 bg-white text-green-600 font-medium px-6 py-2 rounded-full flex items-center gap-2 hover:bg-green-500 hover:text-white transition">
+            Shop Now →
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="w-full h-[536px] rounded-md bg-[url('../images/bgs_3.svg')] bg-cover bg-center text-black flex flex-col justify-center items-center p-6">
+          <p class="text-sm font-medium">SUMMER SALE</p>
+          <h2 class="text-[28px] font-bold text-center mt-2">100% Fresh Fruit</h2>
+          <p class="mt-4 text-lg">
+            Up to
+            <span class="bg-[#1A1A1A] px-3 py-1 rounded text-[#FCC900] font-semibold text-sm">64% OFF</span>
+          </p>
+          <button
+            class="mt-6 bg-white text-green-600 font-medium px-6 py-2 rounded-full flex items-center gap-2 hover:bg-green-500 hover:text-white transition">
+            Shop Now →
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- 30% SALE CARD -->
+    <div class="bg_30_sale">
+      <section
+        class="w-full max-w-[1320px] h-[358px] mx-auto mt-[60px] rounded-[10px] bg-[url('../images/30_sale.jpg')] bg-cover bg-center flex flex-col lg:flex-row lg:justify-end items-center px-6 lg:px-10 text-center lg:text-left">
+        <!-- Text content wrapper -->
+        <div class="max-w-[441px] flex flex-col justify-between text-white">
+          <p class="text-sm uppercase tracking-wide">SUMMER SALE</p>
+
+          <!-- H2 -->
+          <h2
+            class="font-poppins font-semibold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[120%]">
+            <span class="text-orange-500">37%</span> OFF
+          </h2>
+
+          <p class="text-sm sm:text-base mt-2 leading-relaxed text-gray-200">
+            Free on all your order, Free Shipping and 30 days <br class="hidden sm:block" />
+            money-back guarantee
+          </p>
+
+          <!-- Button -->
+          <button
+            class="w-[140px] sm:w-[162px] mt-5 bg-green-600 text-center text-white font-medium px-6 sm:px-7 py-2 sm:py-3 rounded-full flex items-center justify-center hover:bg-green-500 transition mx-auto lg:mx-0">
+            Shop Now →
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- FEATURE CAROUSEL -->
+    <section class="w-full max-w-[1320px] mx-auto mt-[60px] px-4">
+      <!-- Title & View All -->
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl sm:text-2xl font-semibold">Featured Products</h2>
+        <a href="#" class="text-green-600 font-medium flex items-center gap-1 text-sm sm:text-base">
+          View All →
+        </a>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+        <!-- Card 1 -->
+        <div
+          class="group border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition">
+          <!-- Product Image -->
+          <img src="./images/p1.svg" alt="Chinese cabbage" class="w-full h-[200px] object-contain p-4" />
+
+          <!-- Buttons -->
+          <div class="absolute top-3 right-3 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition">
+            <button
+              class="loveBtn w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 transition">
+              <img src="./images/love.svg" alt="Love" class="w-4 h-4" />
+            </button>
+            <button
+              class="eyeBtn w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 transition">
+              <img src="./images/eye.svg" alt="View" class="w-4 h-4" />
+            </button>
+          </div>
+
+          <!-- Product Info -->
+          <div class="px-4 pb-4">
+            <h3 class="text-green-600 font-medium mt-2 text-center sm:text-left">Chinese cabbage</h3>
+            <p class="text-gray-800 font-semibold text-center sm:text-left">$12.00</p>
+            <div class="flex justify-center sm:justify-start space-x-1 text-orange-500 text-sm">
+              ★★★★☆
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition">
+          <img src="./images/p2.svg" alt="Fresh Indian Malta" class="w-full h-[200px] object-contain p-4" />
+          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Fresh Indian Malta</h3>
+          <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$20.00</p>
+          <button
+            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition">
+            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+          </button>
+          <!-- Rating Stars -->
+          <div class="flex justify-center space-x-1 mt-1 text-orange-500 text-sm">
+            ★★★★☆
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition">
+          <img src="./images/p3.svg" alt="Chinese Cabbage" class="w-full h-[200px] object-contain p-4" />
+          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Chinese Cabbage</h3>
+          <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$12.00</p>
+          <button
+            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition">
+            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+          </button>
+          <div class="flex justify-center space-x-1 mt-1 text-orange-500 text-sm">★★★★☆</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition">
+          <img src="./images/p4.svg" alt="Green Lettuce" class="w-full h-[200px] object-contain p-4" />
+          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Green Lettuce</h3>
+          <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$9.00</p>
+          <button
+            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition">
+            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+          </button>
+          <div class="flex justify-center space-x-1 mt-1 text-orange-500 text-sm">★★★★☆</div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="border border-[#E5E5E5] rounded-md bg-white relative hover:shadow-lg hover:border-green-500 transition">
+          <img src="./images/p5.svg" alt="Eggplant" class="w-full h-[200px] object-contain p-4" />
+          <h3 class="font-poppins font-medium text-[16px] text-center mt-3">Eggplant</h3>
+          <p class="font-poppins font-semibold text-[14px] text-center text-gray-800">$34.00</p>
+          <button
+            class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#F2F2F2] hover:bg-green-500 transition">
+            <img src="./images/p_icon.svg" alt="Add" class="w-5 h-5" />
+          </button>
+          <div class="flex justify-center space-x-1 mt-1 text-orange-500 text-sm">★★★★☆</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER CARDS -->
+    <div class="footer_cards">
+      <section class="w-full max-w-[1320px] mx-auto my-10 text-center px-4">
+        <h2 class="text-xl sm:text-2xl font-semibold mb-8">Latest News</h2>
+
+        <!-- Responsive grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative w-full h-[200px] sm:h-[250px]">
+              <img src="./images/foot_img1.svg" alt="Food Image 1" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 text-left">
+              <p class="text-sm text-gray-500 mb-2">🍴 Food | 👤 Admin | 💬 55 Comments</p>
+              <h3 class="text-base font-medium mb-3">
+                Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.
+              </h3>
+              <a href="#" class="text-green-600 font-semibold text-sm">Read More →</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative w-full h-[200px] sm:h-[250px]">
+              <img src="./images/foot_img2.svg" alt="Food Image 2" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 text-left">
+              <p class="text-sm text-gray-500 mb-2">🍴 Food | 👤 Admin | 💬 55 Comments</p>
+              <h3 class="text-base font-medium mb-3">
+                Eget lobortis lorem lacinia. Vivamus pharetra semper.
+              </h3>
+              <a href="#" class="text-green-600 font-semibold text-sm">Read More →</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative w-full h-[200px] sm:h-[250px]">
+              <img src="./images/foot_img3.svg" alt="Food Image 3" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 text-left">
+              <p class="text-sm text-gray-500 mb-2">🍴 Food | 👤 Admin | 💬 55 Comments</p>
+              <h3 class="text-base font-medium mb-3">
+                Maecenas blandit risus elementum mauris malesuada.
+              </h3>
+              <a href="#" class="text-green-600 font-semibold text-sm">Read More →</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER Content -->
+    <section class="w-full bg-gray-100 py-[60px]">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <!-- Title -->
+        <h2 class="text-xl sm:text-2xl font-semibold mb-8 text-center">Client Testimonials</h2>
+
+        <!-- Cards wrapper -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <div class="bg-white rounded-lg shadow p-6">
             <p class="text-gray-600 text-sm mb-6">
-              “Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+              “Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
               Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.”
             </p>
             <div class="flex items-center gap-3">
@@ -2101,11 +1094,11 @@ class="w-[1320px] h-[536px] mx-auto mt-[60px] grid grid-cols-3 gap-[30px]"
             </div>
             <div class="flex gap-1 mt-2 text-orange-500">⭐⭐⭐⭐⭐</div>
           </div>
-    
+
           <!-- Card 2 -->
-          <div class="bg-white rounded-lg shadow p-6 w-[424px]">
+          <div class="bg-white rounded-lg shadow p-6">
             <p class="text-gray-600 text-sm mb-6">
-              “Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+              “Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
               Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.”
             </p>
             <div class="flex items-center gap-3">
@@ -2117,11 +1110,11 @@ class="w-[1320px] h-[536px] mx-auto mt-[60px] grid grid-cols-3 gap-[30px]"
             </div>
             <div class="flex gap-1 mt-2 text-orange-500">⭐⭐⭐⭐⭐</div>
           </div>
-    
+
           <!-- Card 3 -->
-          <div class="bg-white rounded-lg shadow p-6 w-[424px]">
+          <div class="bg-white rounded-lg shadow p-6">
             <p class="text-gray-600 text-sm mb-6">
-              “Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+              “Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
               Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.”
             </p>
             <div class="flex items-center gap-3">
@@ -2133,81 +1126,83 @@ class="w-[1320px] h-[536px] mx-auto mt-[60px] grid grid-cols-3 gap-[30px]"
             </div>
             <div class="flex gap-1 mt-2 text-orange-500">⭐⭐⭐⭐⭐</div>
           </div>
+
         </div>
       </div>
     </section>
-    </div>
-       <!-- FOOTER -->
-       <footer class="bg-[#1A1A1A] text-gray-400 text-sm">
-        <div class="max-w-[1320px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <!-- Logo & Description -->
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <img src="./images/logo_icon.svg" alt="Ecobazar Logo" class="h-6">
-              <span class="text-white font-semibold text-lg">Ecobazar</span>
-            </div>
-            <p class="mb-4">
-              Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.
-            </p>
-            <p class="mb-2">
-              <a href="tel:+2955550114" class="text-white font-semibold">(295) 555-0114</a> or
-            </p>
-            <p>
-              <a href="mailto:Proxy@gmail.com" class="text-green-500">Proxy@gmail.com</a>
-            </p>
-          </div>
-      
-          <!-- My Account -->
-          <div>
-            <h3 class="text-white font-semibold mb-4">My Account</h3>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-green-500">My Account</a></li>
-              <li><a href="#" class="hover:text-green-500">Order History</a></li>
-              <li><a href="#" class="hover:text-green-500">Shopping Cart</a></li>
-              <li><a href="#" class="hover:text-green-500">Wishlist</a></li>
-            </ul>
-          </div>
-      
-          <!-- Helps -->
-          <div>
-            <h3 class="text-white font-semibold mb-4">Helps</h3>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-green-500">Contact</a></li>
-              <li><a href="#" class="hover:text-green-500">FAQs</a></li>
-              <li><a href="#" class="hover:text-green-500">Terms & Condition</a></li>
-              <li><a href="#" class="hover:text-green-500">Privacy Policy</a></li>
-            </ul>
-          </div>
-      
-          <!-- Categories -->
-          <div>
-            <h3 class="text-white font-semibold mb-4">Categories</h3>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-green-500">Fruit & Vegetables</a></li>
-              <li><a href="#" class="hover:text-green-500">Meat & Fish</a></li>
-              <li><a href="#" class="hover:text-green-500">Bread & Bakery</a></li>
-              <li><a href="#" class="hover:text-green-500">Beauty & Health</a></li>
-            </ul>
-          </div>
-        </div>
-      
-        <!-- Bottom Bar -->
-        <div class="border-t border-gray-700 mt-6">
-          <div class="max-w-[1320px] mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-gray-500">Ecobazar eCommerce © 2021, All Rights Reserved</p>
-            <div class="flex items-center gap-3">
-              <img src="./images/applepay.svg" alt="Apple Pay" class="w-[65px] h-[32px]">
-              <img src="./images/visa.svg" alt="Visa" class="w-[65px] h-[32px]">
-              <img src="./images/mastercard.svg" alt="Mastercard" class="w-[65px] h-[32px]">
-              <img src="./images/secure.svg" alt="Secure Payment" class="">
-            </div>
-          </div>
-        </div>
-      </footer>
-      
 
-    <script type="module" src="./js/app.js"></script>
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-  </body>
+  </div>
+  <!-- FOOTER -->
+  <footer class="bg-[#1A1A1A] text-gray-400 text-sm">
+    <div class="max-w-[1320px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+      <!-- Logo & Description -->
+      <div>
+        <div class="flex justify-center md:justify-start items-center gap-2 mb-4">
+          <img src="./images/logo_icon.svg" alt="Ecobazar Logo" class="h-6">
+          <span class="text-white font-semibold text-lg">Ecobazar</span>
+        </div>
+        <p class="mb-4">
+          Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.
+        </p>
+        <p class="mb-2">
+          <a href="tel:+2955550114" class="text-white font-semibold">(295) 555-0114</a> or
+        </p>
+        <p>
+          <a href="mailto:Proxy@gmail.com" class="text-green-500">Proxy@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- My Account -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">My Account</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-green-500">My Account</a></li>
+          <li><a href="#" class="hover:text-green-500">Order History</a></li>
+          <li><a href="#" class="hover:text-green-500">Shopping Cart</a></li>
+          <li><a href="#" class="hover:text-green-500">Wishlist</a></li>
+        </ul>
+      </div>
+
+      <!-- Helps -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Helps</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-green-500">Contact</a></li>
+          <li><a href="#" class="hover:text-green-500">FAQs</a></li>
+          <li><a href="#" class="hover:text-green-500">Terms & Condition</a></li>
+          <li><a href="#" class="hover:text-green-500">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Categories</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-green-500">Fruit & Vegetables</a></li>
+          <li><a href="#" class="hover:text-green-500">Meat & Fish</a></li>
+          <li><a href="#" class="hover:text-green-500">Bread & Bakery</a></li>
+          <li><a href="#" class="hover:text-green-500">Beauty & Health</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-700 mt-6">
+      <div
+        class="max-w-[1320px] mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <p class="text-gray-500">Ecobazar eCommerce © 2021, All Rights Reserved</p>
+        <div class="flex justify-center md:justify-end items-center gap-3">
+          <img src="./images/applepay.svg" alt="Apple Pay" class="w-[65px] h-[32px]">
+          <img src="./images/visa.svg" alt="Visa" class="w-[65px] h-[32px]">
+          <img src="./images/mastercard.svg" alt="Mastercard" class="w-[65px] h-[32px]">
+          <img src="./images/secure.svg" alt="Secure Payment">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
 </html>

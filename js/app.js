@@ -144,3 +144,55 @@ function updateCountdown() {
 const timerInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
+
+const btnModal = document.getElementById('btn-modal');
+const overlayModal = document.getElementById('overlay-modal');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('close');
+
+btnModal.addEventListener('click', () => {
+  overlayModal.classList.remove('hidden');
+  setTimeout(() => {
+    modal.classList.remove('scale-0');
+    modal.classList.add('scale-100');
+  }, 10);
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('scale-100');
+  modal.classList.add('scale-0');
+  setTimeout(() => {
+    overlayModal.classList.add('hidden');
+  }, 300);
+});
+
+const btnDrawer = document.getElementById('btn-drawer');
+const closeDrawer = document.getElementById('close-drawer');
+const overlayDrawer = document.getElementById('overlay-drawer');
+const drawer = document.getElementById('drawer');
+
+btnDrawer.addEventListener('click', () => {
+  overlayDrawer.classList.remove('hidden');
+  setTimeout(() => {
+    drawer.classList.remove('translate-x-full');
+  }, 10);
+});
+
+closeDrawer.addEventListener('click', () => {
+  drawer.classList.add('translate-x-full');
+  setTimeout(() => {
+    overlayDrawer.classList.add('hidden');
+  }, 300);
+});
+// Hamma remove tugmalarini olish
+const removeButtons = document.querySelectorAll('.remove-btn');
+
+removeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // eng yaqin product divini topamiz va o'chiramiz
+    const product = button.closest('.flex.items-center');
+    if (product) {
+      product.remove();
+    }
+  });
+});
