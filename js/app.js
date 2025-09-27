@@ -63,12 +63,12 @@ function updateCartTotal() {
   document.getElementById("cart-total").textContent = `$${total.toFixed(2)}`;
 }
 
-// Barcha love buttonlar
+//  love btn
 const loveBtns = document.querySelectorAll(".loveBtn");
 // Barcha eye buttonlar
 const eyeBtns = document.querySelectorAll(".eyeBtn");
 
-// Love button toggle
+// Love btn active
 loveBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("bg-red-500"); 
@@ -116,7 +116,6 @@ function updateCountdown() {
   const distance = countdownDate - now;
 
   if (distance < 0) {
-    // timer died
     daysEl.innerText = "00";
     hoursEl.innerText = "00";
     minsEl.innerText = "00";
@@ -184,7 +183,7 @@ closeDrawer.addEventListener('click', () => {
     overlayDrawer.classList.add('hidden');
   }, 300);
 });
-// Hamma remove tugmalarini olish
+// Get remove button 
 const removeButtons = document.querySelectorAll('.remove-btn');
 
 removeButtons.forEach(button => {
