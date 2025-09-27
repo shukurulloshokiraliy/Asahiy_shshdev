@@ -188,7 +188,6 @@ const removeButtons = document.querySelectorAll('.remove-btn');
 
 removeButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // eng yaqin product divini topamiz va o'chiramiz
     const product = button.closest('.flex.items-center');
     if (product) {
       product.remove();

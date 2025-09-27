@@ -11,14 +11,14 @@
 </head>
 <body>.
   <!-- HEADER -->
-  <header>
+  <header class="p-0">
     <!-- NAVBAR -->
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav class="bg-white border-gray-200 ">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <!-- Logo -->
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./images/logo_icon.svg" class="h-10" alt="Logo" />
-          <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Ecobazar</span>
+          <span class="self-center text-3xl font-semibold whitespace-nowrap">Ecobazar</span>
         </a>
 
         <!-- Search -->
@@ -64,7 +64,7 @@
           </div>
 
           <!-- Burger -->
-          <div class="burger_menu hidden lg:block">
+          <div class="burger_menu ">
             <button id="btn-drawer">
               <img class="h-6 w-6" src="./images/menu.png" alt="menu" />
             </button>
@@ -193,40 +193,42 @@
   <!-- DOM FUNCTION -->
 
  <!-- Modal Overlay -->
-<div id="overlay-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-[8888]">
-  <div id="modal" class="relative w-[876px] h-[430px] bg-white rounded-lg flex overflow-hidden transform scale-0 transition-transform duration-300">
-    
+ <div id="overlay-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-[8888] p-4">
+  <div id="modal"
+    class="relative w-[876px] h-[430px] bg-white rounded-lg flex flex-col md:flex-row overflow-hidden transform scale-0 transition-transform duration-300">
+
     <!-- Left Image -->
-    <div class="w-1/2 h-full">
-      <img src="./images/modal_img.svg" alt="Newsletter Image" class="w-full h-full object-cover">
+    <div class="w-full md:w-1/2 h-[200px] md:h-full">
+      <img src="./images/modal_img.svg" alt="Newsletter Image"
+        class="w-full h-full object-cover">
     </div>
 
     <!-- Right Content -->
-    <div class="w-1/2 p-10 flex flex-col justify-center">
-      <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-      <p class="text-gray-600 mb-6 " style="text-align: center;">
-        Subscribe to our newsletter and Save your 
+    <div class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+      <h2 class="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">Subscribe to Our Newsletter</h2>
+      <p class="text-gray-600 mb-6 text-center">
+        Subscribe to our newsletter and Save your
         <span class="text-orange-500 font-semibold">20% money</span> with discount code today.
       </p>
-<!-- Input + Button -->
-<div class="flex w-full sm:w-auto">
-  <input style="border-radius: 43px;" type="email" placeholder="Your email address"
-    class="w-full sm:w-[280px] h-[46px]  border border-gray-300 px-4 text-sm focus:outline-none" />
-  <button class="h-[46px] px-6 bg-[#00B207] text-white  hover:bg-green-600 text-sm font-medium"
-    style="border-radius: 43px; margin-left: -34px;">
-    Subscribe
-  </button>
-</div>
 
-<!-- Checkbox -->
-<div class="flex justify-center mt-4">
-  <label class="flex items-center text-sm text-gray-500">
-    <input type="checkbox" class="mr-2">
-    Do not show this window
-  </label>
-</div>
+      <!-- Input + Button -->
+      <div class="flex w-full justify-center md:justify-start">
+        <input type="email" placeholder="Your email address"
+          class="w-[70%] sm:w-[280px] h-[46px] border border-gray-300 px-4 text-sm rounded-full focus:outline-none" />
+        <button
+          class="h-[46px] px-6 bg-[#00B207] text-white hover:bg-green-600 text-sm font-medium rounded-full -ml-8">
+          Subscribe
+        </button>
+      </div>
 
-
+      <!-- Checkbox -->
+      <div class="flex justify-center mt-4">
+        <label class="flex items-center text-sm text-gray-500">
+          <input type="checkbox" class="mr-2">
+          Do not show this window
+        </label>
+      </div>
+    </div>
 
     <!-- Close Button -->
     <button id="close" class="absolute top-4 right-4">
@@ -235,9 +237,6 @@
   </div>
 </div>
 
-
-   
-  </div>
    <!-- Drawer Overlay -->
 <div id="overlay-drawer" class="fixed inset-0 bg-black/60 hidden" style="z-index: 9999;">
   <div id="drawer"
